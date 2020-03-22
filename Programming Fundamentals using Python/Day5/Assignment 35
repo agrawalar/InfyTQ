@@ -1,0 +1,42 @@
+#PF-Assgn-35
+
+global list_of_marks
+list_of_marks=(12,18,25,24,2,5,18,20,20,21)
+
+def find_more_than_average():
+    count = 0
+    total = 0
+    x = len(list_of_marks)
+    for marks in list_of_marks:
+        total = total + marks
+    average_marks = total // x
+    for marks in list_of_marks:
+        if marks > average_marks:
+           
+           
+           #Solution by Abhishek Agrawalcount += 1
+    percentage = (count / x) * 100
+    return percentage
+
+def sort_marks():
+    list_of_mark=[]
+    for marks in list_of_marks:
+        list_of_mark.append(marks)
+    x = len(list_of_mark)
+    for i in range(x):
+        for j in range(i+1,x):
+            if list_of_mark[i] > list_of_mark[j]:
+                list_of_mark[i], list_of_mark[j]=list_of_mark[j], list_of_mark[i]
+    return list_of_mark
+
+def generate_frequency():
+    frequency = [0]*26
+    for marks in list_of_marks:
+        frequency[marks] += 1
+    return frequency
+
+print(find_more_than_average())
+print(generate_frequency())
+print(sort_marks())
+
+#Solution by Abhishek Agrawal
