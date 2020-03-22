@@ -1,0 +1,27 @@
+
+def factorial(number):
+    if number == 0:
+        return 1
+    elif number == 1:
+        return number 
+    else:
+        return (number * factorial(number-1))
+    
+def find_strong_numbers(num_list):
+    strong_num_list = []
+    rem = 0
+    for num in num_list:
+        strong = 0
+        temp = num 
+        while(num != 0):
+            rem = num % 10
+            rem1 = factorial(rem)
+            strong = strong + rem1
+            num = num // 10
+        if strong == temp and temp != 0:
+            strong_num_list.append(temp)
+    return strong_num_list
+    
+num_list=[145,375,100,2,10]
+strong_num_list = find_strong_numbers(num_list)
+print(strong_num_list)
