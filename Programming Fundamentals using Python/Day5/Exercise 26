@@ -25,4 +25,5 @@ def find_strong_numbers(num_list):
 num_list=[145,375,100,2,10]
 strong_num_list = find_strong_numbers(num_list)
 print(strong_num_list)
-#
+
+#Solution by Abhishek Agrawal
