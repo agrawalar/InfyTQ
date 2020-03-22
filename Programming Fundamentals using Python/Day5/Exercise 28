@@ -1,0 +1,20 @@
+#Exercise28                                          
+def find_winner_of_the_day(*match_tuple):
+    t1 = 0
+    t2 = 0
+    for team in match_tuple:
+        if team == "Team1":
+            t1 += 1
+        elif team == "Team2":
+            t2 += 1
+    if t1 > t2:
+        return "Team1" 
+    elif t1 < t2:
+        return "Team2"
+    else:
+        return "Tie"
+
+#print(find_winner_of_the_day("Team1","Team2","Team1"))
+print(find_winner_of_the_day("Team1","Team2","Team2","Team1","Team2"))
+
+#Solution by Abhishek Agrawal
