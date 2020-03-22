@@ -25,3 +25,5 @@ def make_amount(rupees_to_make,no_of_five,no_of_one):
         print("No. of One needed  :", one_needed)
     
 make_amount(58,9,25)
+
+#Solution by Abhishek Agrawal
