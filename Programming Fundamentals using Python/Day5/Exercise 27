@@ -1,0 +1,52 @@
+#Exercise27
+global account_list
+account_list = [1001,1002,1003,1004,1005]
+global balance_list
+balance_list = [2500,10000,7000,1500,500]
+amount=1000
+account_number=1003
+transaction_type="Deposit"
+    
+def transaction(transaction_type, account_number, amount):
+    if transaction_type == "Withdraw":
+        if account_number in account_list:
+            index = account_list.index(account_number)
+            balance = balance_list[index]
+            new_balance = balance - amount
+            if(new_balance >= 500):
+                balance_list[index] = new_balance
+                print("Transaction completed successfully")
+                print("Balance Amount :", new_balance)
+            else:
+                print("Insufficient Balance")
+        else:
+            print("Invalid Account number")
+              
+    elif transaction_type == "Deposit": 
+        if account_number in account_list:
+            index = account_list.index(account_number)
+            balance = balance_list[index]
+            new_balance = balance + amount
+            if(new_balance >= 500):
+                balance_list[index] = new_balance
+                print("Transaction completed successfully")
+                print("Balance Amount :", new_balance)
+            else:
+                print("Insufficient Balance")
+        else:
+            print("Invalid Account number")
+     
+    elif transaction_type == "Balance Enquiry":
+        if account_number in account_list:
+            index = account_list.index(account_number)
+            balance=balance_list[index]
+            print(balance)
+        else:
+            print("Invalid Account number")
+        
+    else:
+        print("Invalid Transaction Type")
+    
+transaction(transaction_type, account_number, amount)
+
+#Solution by Abhishek Agrawal
