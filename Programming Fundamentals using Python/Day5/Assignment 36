@@ -1,0 +1,17 @@
+#PF-Assgn-36
+def create_largest_number(number_list):
+    x = len(number_list)
+    largest_number = ""
+    for i in range(x):
+        for j in range(i+1,x):
+            if number_list[i] < number_list[j]:
+                number_list[i], number_list[j] = number_list[j], number_list[i]
+    for num in number_list:
+        largest_number += str(num)
+    return largest_number
+
+number_list=[23,45,67]
+largest_number=create_largest_number(number_list)
+print(largest_number)
+
+#Solution by Abhishek Agrawal
