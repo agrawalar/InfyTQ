@@ -1,0 +1,22 @@
+#PF-Assgn-38
+
+def check_double(number):
+    num = str(number) 
+    if num[0] < "5" and num[0] > "0":
+        twice = 2 * number
+        double = str(twice)
+        for x in num:
+            flag = 0
+            for y in double:
+                if x == y:
+                    flag = 1
+            if flag != 1:
+                return False
+        return True
+    else:
+        return False
+        
+#Provide different values for number and test your program
+print(check_double(125874))
+
+#Solution by Abhishek Agrawal
