@@ -1,0 +1,22 @@
+#PF-Exer-30
+def find_average(mark_list):
+    total=0
+    try:
+        for i in range(0, len(mark_list)):
+            total+=mark_list[i]
+        marks_avg=total/len(mark_list)
+        return marks_avg
+    except TypeError:
+        return "Data Type Error"
+    except ZeroDivisionError:
+        return "Zero Division Error"
+    except IndexError:
+        return "Indexing Error"
+try:
+    m_list=[15,26,34,24]
+    print("Average marks:", find_average(m_list))
+except ValueError:
+    print ("Value Error")
+
+#ZeroDivisionError TypeError NameError IndexError ValueError
+#Solution by Abhishek Agrawal
