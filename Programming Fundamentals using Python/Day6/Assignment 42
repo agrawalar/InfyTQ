@@ -1,0 +1,39 @@
+#PF-Assgn-42
+def find_factors(num):
+    factors = []
+    for i in range(2,(num+1)):
+        if(num%i==0):
+            factors.append(i)
+    return factors
+
+def is_prime(num, i):
+    if(i==1):
+        return True
+    elif(num%i==0):
+        return False;
+    else:
+        return(is_prime(num,i-1))
+
+def find_largest_prime_factor(list_of_factors):
+    largest = 0
+    for num in list_of_factors:
+        if is_prime(num, num//2):
+            if largest < num:
+                largest = num
+                
+    return largest
+
+def find_f(num):
+    factors = find_factors(num)
+    fn = find_largest_prime_factor(factors)
+    return fn
+
+def find_g(num):
+    s = 0
+    for i in range (9):
+        s += find_f(num+i)
+    return s 
+
+print (find_g(10))
+
+#Solution by Abhishek Agrawal
