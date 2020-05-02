@@ -12,4 +12,4 @@ def guess_number(number_in_mind):
 #Provide different values for number_in_mind and test your program
 guess_number(4)
 
-#
+#Solution by Abhishek Agrawal
