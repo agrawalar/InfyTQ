@@ -21,3 +21,5 @@ def encrypt_sentence(sentence, vowel = ['a','e','i','o','u']):
 sentence="the sun rises in the east"
 encrypted_sentence = encrypt_sentence(sentence)
 print(encrypted_sentence)
+
+#Solution by Abhishek Agrawal
