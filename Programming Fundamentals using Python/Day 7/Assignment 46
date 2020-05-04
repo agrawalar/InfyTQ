@@ -1,0 +1,16 @@
+#PF-Assgn-46
+
+def nearest_palindrome(number):
+    while(1):
+        number = str(number)
+        revnumber = number[::-1]
+        if number == revnumber:
+            number = int(number)
+            break
+        number = int(number) + 1
+    return number
+
+number=12331
+print(nearest_palindrome(number))
+
+#Solution by Abhishek Agrawal
