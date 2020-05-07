@@ -1,0 +1,30 @@
+#PF-Assgn-52
+def sum_of_numbers(list_of_num,filter_func=None):
+    total = 0
+    list_of_num = list(list_of_num)
+    if filter_func == None:
+        for data in list_of_num:
+            total = total + data
+    else:
+        list_of_num = filter_func(list_of_num)
+        for data in list_of_num:
+            total  = total + data
+    return total
+
+def even(list_of_num):
+    for data in list_of_num:
+            if data % 2 != 0:
+                list_of_num.remove(data) 
+    return list_of_num
+
+
+def odd(list_of_num):
+    for data in list_of_num:
+            if data % 2 == 0:
+                list_of_num.remove(data) 
+    return list_of_num
+
+sample_data = range(1,11)
+print(sum_of_numbers(sample_data,None))
+
+#Solution by Abhishek Agrawal
