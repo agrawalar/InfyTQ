@@ -1,0 +1,25 @@
+#PF-Assgn-53
+import re
+poem='''It takes strength for being certain,
+It takes courage to have doubt.
+It takes strength for challenging alone,
+It takes courage to lean on another.
+It takes strength for loving other souls,
+It takes courage to be loved.
+It takes strength for hiding our own pain,
+It takes courage to help if it is paining for someone.'''
+pattern = re.compile(r"v")
+matches=pattern.finditer(poem)
+count=0
+for match in matches:
+    count=count+1
+print(count)
+print(re.sub(r'(\n+)(?=[A-Z])', r' ', poem))
+poem1 = re.sub(r'ch', r'Ch', poem)
+poem1 = re.sub(r'co', r'Co', poem)
+print(poem1)
+poem2 = re.sub(r'ai...', r'ai*\*', poem)
+poem2 = re.sub(r'hi...', r'hi*\*', poem)
+print(poem2)
+
+#Solution by Abhishek Agrawal
