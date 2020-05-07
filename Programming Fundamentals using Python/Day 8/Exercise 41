@@ -13,3 +13,5 @@ range_of_values = lambda x : x < 51 and x > 24
 print(sum_all(greater,list_of_nos))
 print(sum_all(divide,list_of_nos))
 print(sum_all(range_of_values,list_of_nos))
+
+#Solution by Abhishek Agrawal
